@@ -1,0 +1,49 @@
+
+@{
+    ViewBag.Title = "ChiTietSP";
+    Layout = "~/Views/shared/UserLayout.cshtml";
+}
+
+@model bai1.Models.Sach
+
+<h2>ChiTietSP</h2>
+
+<div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+        <a href="#" class="btn btn-primary">mua ngay</a>
+        <a href="#" class="btn btn-primary">mua tiep</a>
+    </div>
+</div>
+    
+<table class="border-dark mx-3 mb-3 mt-3">
+    <tr class="text-left">
+        <td rowspan="5"><img class="card-img-top" src="..." alt="Card image cap"></td>
+        <td width="20%">Ten sach</td>
+        <td>@Model.TenSach</td>
+    </tr>
+    <tr class="text-left">
+        <td>Ten chu de</td>
+        <td style="color:blue">@Model.ChuDe.TenChuDe</td>
+    </tr>
+    <tr class="text-left"> 
+        <td>ten nxb:</td>
+        <td style="color:blue">@Model.NhaXuatBan.TenNXB</td>
+    </tr>
+    <tr class="text-left">
+        <td>nd tom tat:</td>
+        <td class="text_justify">@Model.MoTa</td>
+    </tr>
+
+    <tr class="text-left">
+        <td>gia ban:</td>
+        <td style="color:red ;font-weight:bold">@string.Format("{0:0:0}",@Model.GiaBan) VND</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="#">
+                <input />
+            </a>
+        </td>
+    </tr>
+</table>        
