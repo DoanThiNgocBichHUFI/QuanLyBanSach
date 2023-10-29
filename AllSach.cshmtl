@@ -1,0 +1,28 @@
+
+@{
+    ViewBag.Title = "AllSach";
+    Layout = "~/Views/shared/UserLayout.cshtml";
+}
+
+@model IEnumerable<bai1.Models.Sach>
+@*<h2>AllSach</h2>*@
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-4">
+                <img src="/hinhSP/@item.AnhBia" width="50%" height="50px"/>
+                @if (item.TenSach.Length > 30)
+                {
+                    <p>Tieu de: 
+                <b>@item.TenSach.Substring(0,30)...</b>
+                </p>
+                }else{
+                    <p>Tieu de: <b>@item.TenSach</b>
+                    <a href="#">Xem chi tiet</a>
+                </p>
+                }
+            </div>
+        }
+    }
+</div>
