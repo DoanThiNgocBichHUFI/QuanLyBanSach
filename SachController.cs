@@ -36,5 +36,15 @@ namespace bai1.Controllers
 	     return View(listSach_nxb);
 	 }
 
+   	public ActionResult ChiTietSP(int maSach)
+	{
+	    var sach = db.Saches.Single(s => s.MaSach == maSach);
+	    if (sach == null)
+	    {
+		return HttpNotFound();
+	    }
+	    return View(sach);
+	}
+
      }
 }
