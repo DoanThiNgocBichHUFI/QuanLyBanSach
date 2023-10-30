@@ -23,13 +23,14 @@
                     <p>
                         Tieu de:
                         <b>@item.TenSach.Substring(0, 30)...</b>
+                        <a href="@Url.Action("ChiTietSP", "SanPham", new { masach = @item.MaSach })" class="btn btn-primary">Xem Chi Tiết</a>
                     </p>
                 }
                 else
                 {
                     <p>
                         Tieu de: <b>@item.TenSach</b>
-                        <a href="#">Xem chi tiet</a>
+                       <a href="@Url.Action("ChiTietSP", "SanPham", new { masach = @item.MaSach })" class="btn btn-primary">Xem Chi Tiết</a>
                     </p>
                 }
             </div>
