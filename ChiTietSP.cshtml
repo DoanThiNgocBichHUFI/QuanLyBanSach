@@ -7,7 +7,7 @@
 @model bai1.Models.Sach
 
 <h2>ChiTietSP</h2>
-
+/*
 <div class="card" style="width: 18rem;">
     
     <div class="card-body">
@@ -15,7 +15,7 @@
         <a href="#" class="btn btn-primary">mua tiep</a>
     </div>
 </div>
-    
+   */ 
 <table class="border-dark mx-3 mb-3 mt-3">
     <tr class="text-left">
         <td rowspan="5"><img class="card-img-top" src="..." alt="Card image cap"></td>
@@ -41,8 +41,11 @@
     </tr>
     <tr>
         <td>
-            <a href="#">
-                <input />
+            <a href="@Url.Action("SachTheoChuDe", "Sach")">
+                <input type="submit" value="Mua ngay" class="btn btn-primary" />
+            </a>
+            <a href="@Url.Action("AllSach","Sach")">
+                <input type="submit" value="Mua tiep" class="btn btn-primary" />
             </a>
         </td>
     </tr>
