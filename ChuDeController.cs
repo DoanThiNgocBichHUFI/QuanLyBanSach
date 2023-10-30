@@ -17,5 +17,10 @@ namespace bai1.Controllers
             var listChuDe = db.ChuDes.Take(7).OrderBy(cd => cd.TenChuDe).ToList();
             return View(listChuDe);
         }
-	}
+	public ActionResult NXBPartial()
+        {
+            var listChuDe = db.NhaXuatBans.Take(7).OrderBy(cd => cd.TenNXB).ToList();
+            return View(listChuDe);
+        }
+   }
 }
