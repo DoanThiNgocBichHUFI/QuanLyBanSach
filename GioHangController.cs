@@ -49,6 +49,17 @@ namespace bai1.Controllers
             }
             return tsl;
         }
+	private double tongThanhTien()
+        {
+            double ttt = 0;
+            List<GioHang> lstGioHang = Session["GioHang"] as List<GioHang>;
+            if (lstGioHang != null)
+            {
+                ttt += lstGioHang.Sum(sp => sp.dThanhTien);
+            }
+            return ttt;
+        }
+ 
  
 	}
 }
