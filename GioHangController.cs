@@ -12,7 +12,7 @@ namespace bai1.Controllers
         dbQuanLyBanSachDataContext db = new dbQuanLyBanSachDataContext();
         //
         // GET: /GioHang/
-        
+        // xd phương thức lấy giỏ hàng
         public List<GioHang> layGioHang()
         {
             List<GioHang> lstGioHang = Session["GioHang"] as List<GioHang>;
@@ -39,7 +39,16 @@ namespace bai1.Controllers
                 return Redirect(strUrl);
             }
         }
-
+	private int tongSoLuong()
+        {
+            int tsl = 0;
+            List<GioHang> lstGioHang = Session["GioHang"] as List<GioHang>;
+            if (lstGioHang != null)
+            {
+                tsl += lstGioHang.Sum(sp => sp.iSoLuong);
+            }
+            return tsl;
+        }
  
 	}
 }
