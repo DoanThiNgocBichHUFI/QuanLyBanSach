@@ -41,7 +41,7 @@
     </tr>
     <tr>
         <td>
-            <a href="@Url.Action("SachTheoChuDe", "Sach")">
+            <a href="@Url.Action("ThemGioHang", "GioHang", new { @ms = Model.MaSach, @strURL = Request.Url.ToString() })">
                 <input type="submit" value="Mua ngay" class="btn btn-primary" />
             </a>
             <a href="@Url.Action("AllSach","Sach")">
