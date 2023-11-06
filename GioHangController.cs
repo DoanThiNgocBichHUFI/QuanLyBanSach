@@ -71,7 +71,12 @@ namespace bai1.Controllers
             ViewBag.tongThanhTien = tongThanhTien();
             return View(lstGioHang);
         }
- 	
+ 	public ActionResult GioHangPartial()
+        {
+            ViewBag.tongSoLuong = tongSoLuong();
+
+            return PartialView();
+        }
  
 	}
 }
