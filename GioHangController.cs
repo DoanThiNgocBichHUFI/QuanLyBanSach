@@ -59,7 +59,19 @@ namespace bai1.Controllers
             }
             return ttt;
         }
- 
+ 	//xd trang gio hang
+        public ActionResult gioHang()
+        {
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("Index1", "Home");
+            }
+            List<GioHang> lstGioHang = layGioHang();
+            ViewBag.tongSoLuong = tongSoLuong();
+            ViewBag.tongThanhTien = tongThanhTien();
+            return View(lstGioHang);
+        }
+ 	
  
 	}
 }
