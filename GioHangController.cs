@@ -23,6 +23,23 @@ namespace bai1.Controllers
             }
             return lstGioHang;
         }
-        
+	public ActionResult ThemGioHang(int ms, string strUrl)
+        {
+            List<GioHang> lstGioHang = layGioHang();
+            GioHang SanPham = lstGioHang.Find(sp => sp.iMaSach == ms);
+            if (SanPham == null)
+            {
+                SanPham = new GioHang(ms);
+                lstGioHang.Add(SanPham);
+                return Redirect(strUrl);
+            }
+            else
+            {
+                SanPham.iSoLuong++;
+                return Redirect(strUrl);
+            }
+        }
+
+ 
 	}
 }
