@@ -1,0 +1,9 @@
+
+
+- Trong Folder Models tạo class Giỏ Hàng
++ Khai báo các thuộc tính cho giỏ hàng
++ Viết hàm khởi tạo giỏ hàng với tham số truyền vào là MaSach
+
+- Tạo Controller: GioHangController
++ Xây dựng phương thưc lấy giỏ hàng, thêm vào giỏ hàng, tính tổng số lượng, tính tổng thành tiền.
++ Xây dựng trang Giỏ Hàng.
