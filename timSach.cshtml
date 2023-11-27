@@ -1,0 +1,37 @@
+
+@{
+    ViewBag.Title = "timSach";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@model IEnumerable<bai1.Models.Sach>
+
+<h2>Sach theo nxb </h2>
+@ViewBag.TB
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-4">
+                @*  <img src="/hinhSP/@item.AnhBia" width="50%" height="50px" />*@
+                @*<img src="@Url.Content("~/hinhSP/" + item.TenSach)"/>*@
+                <img src="~/HinhAnhSP/@item.AnhBia" width="50%" />
+                @if (item.TenSach.Length > 30)
+                {
+                    <p>
+                        Tieu de:
+                        <b>@item.TenSach.Substring(0, 30)...</b>
+                        <a href="~/Sach/ChiTietSP?maSach=@item.MaSach">Xem chi tiet</a>
+                    </p>
+                }
+                else
+                {
+                    <p>
+                        Tieu de: <b>@item.TenSach</b>
+                        <a href="~/Sach/ChiTietSP?maSach=@item.MaSach">Xem chi tiet</a>
+                    </p>
+                }
+            </div>
+        }
+    }
+</div>
