@@ -45,6 +45,11 @@ namespace bai1.Controllers
 	    }
 	    return View(sach);
 	}
+ 	public ActionResult timSach(string txt_search)
+        {
+            var listSach = db.Saches.Where(s => s.TenSach.Contains(txt_search)).ToList();
+            return View(listSach);
+        }
 
      }
 }
